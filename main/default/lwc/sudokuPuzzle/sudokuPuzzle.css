@@ -1,0 +1,69 @@
+.sudoku-container{
+    width:364px;
+    height:364px;
+    margin:20px auto;
+  }
+  .sudoku-box{
+    text-align:center;
+    padding:10px;
+    width:40px;
+    height:40px;
+    border: solid 1px;
+  }
+  .sudoku-box span{
+    font-weight:bold;
+  }
+  .sudoku-box.locked span{
+    color:gray;
+  }
+  .sudoku-border{
+    border: solid 1px;
+  }
+  .sudoku-border-thick{
+    border: solid 2px;
+  }
+  .sudoku-box.top-left{
+    border-left: solid 2px;
+    border-top: solid 2px;
+  }
+  .sudoku-box.top-middle{
+    border-top: solid 2px;
+  }
+  .sudoku-box.top-right{
+    border-right: solid 2px;
+    border-top: solid 2px;
+  }
+  .sudoku-box.middle-right{
+    border-right: solid 2px;
+  }
+  .sudoku-box.bottom-right{
+    border-right: solid 2px;
+    border-bottom: solid 2px;
+  }
+  .sudoku-box.bottom-middle{
+    border-bottom: solid 2px;
+  }
+  .sudoku-box.bottom-left{
+    border-left: solid 2px;
+    border-bottom: solid 2px;
+  }
+  .sudoku-box.middle-left{
+    border-left: solid 2px;
+  }
+  .sbutton{
+    width:30px;
+    height:30px;
+  }
+  .sbutton:disabled{
+    color:gray;
+    border-color:gray;
+  }
+  .button-box{
+    margin: auto;
+    display: flex;
+    width: 434px;
+    background-color: lightgray;
+  }
+  .highlight{
+    background-color: lightgray;
+  }

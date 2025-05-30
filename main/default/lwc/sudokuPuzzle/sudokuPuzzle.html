@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Sudoku" icon-name="utility:puzzle">
+        <lightning-button variant="brand" label="Load Puzzle" title="Load Puzzle" onclick={loadPuzzleClick} slot="actions"></lightning-button>
+        <template if:true={puzzle}>
+            <div class="sudoku-border-thick sudoku-container slds-grid slds-wrap">
+                <template iterator:it={puzzleArray}>
+                <div key={it.value.Id} class={it.value.StyleClass} data-id={it.value.Id} onclick={handleItemClick}>
+                    <span>{it.value.Dis}</span>
+                  </div>
+                </template>
+            </div>
+            <template if:true={itemSelected}>
+                <div class="slds-box slds-box_small button-box">
+                        <button class="slds-button slds-button_neutral sbutton" data-val="1" disabled={cannotBeOne} onclick={handleNumberClick}>1</button>
+                        <button class="slds-button slds-button_neutral sbutton" data-val="2" disabled={cannotBeTwo} onclick={handleNumberClick}>2</button>
+                        <button class="slds-button slds-button_neutral sbutton" data-val="3" disabled={cannotBeThree} onclick={handleNumberClick}>3</button>
+                        <button class="slds-button slds-button_neutral sbutton" data-val="4" disabled={cannotBeFour} onclick={handleNumberClick}>4</button>
+                        <button class="slds-button slds-button_neutral sbutton" data-val="5" disabled={cannotBeFive} onclick={handleNumberClick}>5</button>
+                        <button class="slds-button slds-button_neutral sbutton" data-val="6" disabled={cannotBeSix} onclick={handleNumberClick}>6</button>
+                        <button class="slds-button slds-button_neutral sbutton" data-val="7" disabled={cannotBeSeven} onclick={handleNumberClick}>7</button>
+                        <button class="slds-button slds-button_neutral sbutton" data-val="8" disabled={cannotBeEight} onclick={handleNumberClick}>8</button>
+                        <button class="slds-button slds-button_neutral sbutton" data-val="9" disabled={cannotBeNine} onclick={handleNumberClick}>9</button>
+                        <button class="slds-button slds-button_neutral" data-val="0" onclick={handleNumberClick}>Clear</button>
+                </div>
+            </template>
+            <p slot="footer">{puzzle.Name}</p>
+        </template>
+    </lightning-card>
+</template>
